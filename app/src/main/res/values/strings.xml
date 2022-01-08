@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AndroidTwo</string>
+    <string name="registration_form">Registration Form</string>
+    <string name="enter_your_firstname">Enter Your Firstname</string>
+    <string name="enter_your_lastname">Enter Your Lastname</string>
+    <string name="enter_your_email">Enter Your email</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="submit">Submit</string>
+    <string name="by_aerium_infotech">By Aerium Infotech</string>
+
+    <string-array name="City">
+        <item>Jamnagar</item>
+        <item>Keshod</item>
+        <item>Morbi</item>
+        <item>Rajkot</item>
+    </string-array>
+
+</resources>
