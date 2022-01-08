@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.security.Key;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -47,12 +46,8 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.edtLoginButton);
         registerButton = findViewById(R.id.edtLoginRegsiter);
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, RegistrationActivity.class));
-            }
-        });
+        //anonymous new lambda method
+        registerButton.setOnClickListener(view -> startActivity(new Intent(LoginActivity.this, RegistrationActivity.class)));
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

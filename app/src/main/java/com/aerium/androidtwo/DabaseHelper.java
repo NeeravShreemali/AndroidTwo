@@ -8,6 +8,7 @@ import static com.aerium.androidtwo.MyUtil.COL_6;
 import static com.aerium.androidtwo.MyUtil.COL_7;
 import static com.aerium.androidtwo.MyUtil.COL_8;
 import static com.aerium.androidtwo.MyUtil.COL_9;
+import static com.aerium.androidtwo.MyUtil.SQL_CREATE;
 import static com.aerium.androidtwo.MyUtil.TABLE_NAME;
 
 import android.content.ContentValues;
@@ -28,7 +29,7 @@ public class DabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(MyUtil.SQL_CREATE);
+        sqLiteDatabase.execSQL(SQL_CREATE);
     }
 
     @Override
@@ -57,8 +58,8 @@ public class DabaseHelper extends SQLiteOpenHelper {
     }
 
     public Cursor selectData(String username, String password){
-        SQLiteDatabase db = this.getReadableDatabase();
-        String select_Query = "select " +COL_4+ " ,"+COL_5+" from login where "+COL_4+ " = '"+username+" and "+COL_5+ " = "+password+"' ";
+        SQLiteDatabase db = this.getWritableDatabase();
+        String select_Query = "select " +COL_4+ " ,"+COL_5+" from login where "+COL_4+ " = '"+username+"' and "+COL_5+ " = '"+password+"' ";
         Cursor cursor;
         try {
             cursor = db.rawQuery(select_Query,null);
@@ -70,7 +71,7 @@ public class DabaseHelper extends SQLiteOpenHelper {
 
     public ArrayList<CustomList> getAllData(){
         ArrayList<CustomList> arrayList = new ArrayList<>();
-        SQLiteDatabase db = getReadableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor;
         cursor = db.rawQuery("Select * from login", null);
 

@@ -1,12 +1,12 @@
 package com.aerium.androidtwo;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class ListAdapter extends BaseAdapter {
@@ -34,17 +34,19 @@ public class ListAdapter extends BaseAdapter {
         return i;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         if (view==null){
-            LayoutInflater inflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.custom_list,null);
-            TextView tv =(TextView)view.findViewById(R.id.textView);
+            TextView tv =(TextView)view.findViewById(R.id.listView);
 
-            CustomList list = arrayList.get(i);
+            CustomList list;
+            list = arrayList.get(i);
 
-            tv.setText(list.getFname() + " " + list.getLname() + "\n" + list.username + "\n" + list.getBranch() + "\n" + list.getCity());
+            tv.setText(list.getFname() + " " + list.getLname() + "\n" + list.getUsername() + "\n" + list.getBranch() + "\n" + list.getCity());
         }
         return view;
     }
