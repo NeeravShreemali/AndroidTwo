@@ -10,6 +10,12 @@
     <string name="checkbox">CheckBox</string>
     <string name="submit">Submit</string>
     <string name="by_aerium_infotech">By Aerium Infotech</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="button">Button</string>
+    <string name="aerium_infotech">Aerium Infotech</string>
+    <string name="login">login</string>
+    <string name="register">register</string>
 
     <string-array name="City">
         <item>Jamnagar</item>

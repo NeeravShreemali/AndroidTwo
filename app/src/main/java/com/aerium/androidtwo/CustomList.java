@@ -1,15 +1,12 @@
 package com.aerium.androidtwo;
 
-import java.util.List;
-
 public class CustomList {
-    String fname, lname, username, password, branch, city;
+    String fname, lname, username, branch, city;
 
-    public CustomList(String fname, String lname, String username, String password, String branch, String city){
+    public CustomList(String fname, String lname, String username, String branch, String city){
         this.fname = fname;
         this.lname = lname;
         this.username = username;
-        this.password = password;
         this.branch = branch;
         this.city = city;
     }
@@ -24,10 +21,6 @@ public class CustomList {
 
     public String getUsername(){
         return username;
-    }
-
-    public String getPassword(){
-        return password;
     }
 
     public String getBranch(){

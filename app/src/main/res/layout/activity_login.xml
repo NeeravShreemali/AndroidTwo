@@ -7,4 +7,94 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <TextView
+      android:id="@+id/edtHeadLogin"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="168dp"
+      android:layout_marginLeft="168dp"
+      android:layout_marginTop="150dp"
+      android:layout_marginEnd="169dp"
+      android:layout_marginRight="169dp"
+      android:text="@string/login"
+      android:textSize="30sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+      android:id="@+id/edtLoginUsername"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="100dp"
+      android:layout_marginLeft="100dp"
+      android:layout_marginTop="25dp"
+      android:layout_marginEnd="101dp"
+      android:layout_marginRight="101dp"
+      android:ems="10"
+      android:hint="@string/username"
+      android:inputType="textPersonName"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtHeadLogin" />
+
+  <EditText
+      android:id="@+id/edtLoginPassword"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="100dp"
+      android:layout_marginLeft="100dp"
+      android:layout_marginTop="24dp"
+      android:layout_marginEnd="101dp"
+      android:layout_marginRight="101dp"
+      android:ems="10"
+      android:hint="@string/password"
+      android:inputType="textPassword"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtLoginUsername" />
+
+  <Button
+      android:id="@+id/edtLoginButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="158dp"
+      android:layout_marginLeft="158dp"
+      android:layout_marginTop="51dp"
+      android:layout_marginEnd="159dp"
+      android:layout_marginRight="159dp"
+      android:text="@string/login"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtLoginPassword" />
+
+  <Button
+      android:id="@+id/edtLoginRegsiter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="158dp"
+      android:layout_marginLeft="158dp"
+      android:layout_marginTop="19dp"
+      android:layout_marginEnd="159dp"
+      android:layout_marginRight="159dp"
+      android:text="@string/register"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtLoginButton" />
+
+  <TextView
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="154dp"
+      android:layout_marginLeft="154dp"
+      android:layout_marginTop="129dp"
+      android:layout_marginEnd="154dp"
+      android:layout_marginRight="154dp"
+      android:layout_marginBottom="87dp"
+      android:text="@string/aerium_infotech"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtLoginRegsiter" />
+</androidx.constraintlayout.widget.ConstraintLayout>
